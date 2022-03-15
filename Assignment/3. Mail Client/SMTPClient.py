@@ -20,7 +20,7 @@ if recv[:3] != '220':
 	print('220 reply not received from server.')
 
 # Send HELO command and print server response.
-# Send EHLO command for SMTP or TLS / SSL
+# Send EHLO command for SMTP over TLS / SSL
 heloCommand = 'HELO Alice\r\n'
 clientSocket.send(heloCommand.encode())
 recv1 = clientSocket.recv(1024).decode()
